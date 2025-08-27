@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>بازی تپ همستر</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffe4b5;
+            font-family: Tahoma, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #score {
+            font-size: 24px;
+            margin: 15px 0;
+        }
+        #hamsterBtn {
+            width: 200px;
+            height: 200px;
+            background: url('https://i.postimg.cc/3RJyqdpD/hamster.png') no-repeat center center;
+            background-size: contain;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.1s;
+        }
+        #hamsterBtn:active {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>بازی تپ همستر 🐹</h1>
+    <div id="score">امتیاز: 0</div>
+    <button id="hamsterBtn"></button>
+
+    <script>
+        let score = 0;
+        const scoreDisplay = document.getElementById('score');
+        const hamsterBtn = document.getElementById('hamsterBtn');
+
+        hamsterBtn.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = "امتیاز: " + score;
+        });
+    </script>
+</body>
+</html>
